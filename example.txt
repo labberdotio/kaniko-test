@@ -1,0 +1,48 @@
+
++ /kaniko/executor -f /home/jenkins/agent/workspace/kaniko-pipeline-test/Dockerfile -c /home/jenkins/agent/workspace/kaniko-pipeline-test --force --insecure --skip-tls-verify '--cache=true' '--destination=YYY'
+[33mWARN[0m[0000] kaniko is being run outside of a container. This can have dangerous effects on your system 
+[36mINFO[0m[0001] Retrieving image manifest alpine:3.18        
+[36mINFO[0m[0001] Retrieving image alpine:3.18 from registry index.docker.io 
+[36mINFO[0m[0004] Retrieving image manifest alpine:3.18        
+[36mINFO[0m[0004] Returning cached image manifest              
+[36mINFO[0m[0006] Built cross stage deps: map[]                
+[36mINFO[0m[0006] Retrieving image manifest alpine:3.18        
+[36mINFO[0m[0006] Returning cached image manifest              
+[36mINFO[0m[0006] Retrieving image manifest alpine:3.18        
+[36mINFO[0m[0006] Returning cached image manifest              
+[36mINFO[0m[0006] Executing 0 build triggers                   
+[33mWARN[0m[0006] maintainer is deprecated, skipping           
+[36mINFO[0m[0006] Checking for cached layer ... 
+[36mINFO[0m[0007] No cached layer found for cmd RUN echo "Hello from kaniko" 
+[36mINFO[0m[0007] Unpacking rootfs as cmd RUN echo "Hello from kaniko" requires it. 
+[36mINFO[0m[0007] RUN echo "Hello from kaniko"                 
+[36mINFO[0m[0007] Taking snapshot of full filesystem...        
+[36mINFO[0m[0007] cmd: /bin/sh                                 
+[36mINFO[0m[0007] args: [-c echo "Hello from kaniko"]          
+[36mINFO[0m[0007] Running: [/bin/sh -c echo "Hello from kaniko"] 
+Hello from kaniko
+[36mINFO[0m[0007] Taking snapshot of full filesystem...        
+[36mINFO[0m[0008] No files were changed, appending empty layer to config. No layer added to image. 
+[36mINFO[0m[0008] CMD ["cat", "/etc/os-release"]               
+[36mINFO[0m[0008] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0008] Pushing layer XXX to cache now 
+[36mINFO[0m[0008] Pushing image to XXX 
+[36mINFO[0m[0013] Pushed XXX 
+[36mINFO[0m[0013] Pushing image to XXX 
+[36mINFO[0m[0018] Pushed XXX 
+
+
+
+> docker pull XXX              
+latest: Pulling from XXX 
+... 
+
+> docker run XXX              
+NAME="Alpine Linux"
+ID=alpine
+VERSION_ID=3.18.11
+PRETTY_NAME="Alpine Linux v3.18"
+HOME_URL="https://alpinelinux.org/"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+
+
